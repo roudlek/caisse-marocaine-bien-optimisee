@@ -1,0 +1,88 @@
+print("Bienvenue chez nous")
+print("entrer les couts des produits 1 par 1")
+print("dh est quand vous finissez tapez un nombre negative ou egal a 0")
+
+C = 0
+S = 0
+prix = 1
+
+if prix > 0:
+    while True:         # en utilisant tanque
+        C = C + 1
+        print("entrer le cout d'achat du produit",C,":")
+        prix = int(input())
+        if prix <= 0:
+            break
+        else:
+            S = S + prix
+ 
+    if C >= 2 :
+        print("la somme des produits dh est :", S)
+        print("entrer votre monnaie SVP :")
+        monnaie = int(input())
+
+        if monnaie < S :
+            while monnaie < S:
+                print("veuillez ajouter plus d'argent")
+                addition = int(input())
+                monnaie = monnaie + addition
+
+        if monnaie == S:
+            print("merci pour votre visite")
+            
+
+        elif monnaie > S :
+            remise = monnaie - S
+            print("la remise dh est de ",remise,"Dh")
+            if remise >= 200:
+                nbf200 = remise // 200
+                reste = remise % 200
+                print("nombre de feuille de 200 dh est : ",nbf200)
+                remise = reste
+
+            if remise >= 100:
+                nbf100 = remise // 100
+                reste = remise % 100
+                print("nombre de feuille de 100 dh est : ",nbf100)
+                remise = reste
+
+            if remise >= 50:
+                nbf50 = remise // 50
+                reste = remise % 50
+                print("nombre de feuille de 50 dh est : ",nbf50)
+                remise = reste
+
+            if remise >= 40:
+                nbf20 = remise // 20
+                reste = remise % 20
+                print("nombre de feuille de 20 dh est : ",nbf20)
+                remise = reste
+
+            if remise >= 20:
+                nbf20 = remise // 20
+                reste = remise % 20
+                print("nombre de feuille de 20 dh est : ",nbf20)
+                remise = reste
+
+            if remise >= 10:
+                nbp10 = remise // 10
+                reste = remise % 10
+                print("nombre de pieces de 10 dh est : ",nbp10)
+                remise = reste
+
+            if remise >= 5:
+                nbp5 = remise // 5
+                reste = remise % 5
+                print("nombre de pieces de 5 dh est : ",nbp5)
+                remise = reste
+
+            if remise >= 2:
+                nbp2 = remise // 2
+                reste = remise % 2
+                print("nombre de pieces de 2 dh est : ",nbp2)
+                remise = reste
+                
+            if remise >= 1:
+                nbp1 = remise // 1
+                reste = remise % 1
+                print("nombre de pieces de 1 dh est : ",nbp1)
