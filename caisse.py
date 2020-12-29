@@ -102,7 +102,6 @@ elif monnaie > S :
 
     if remise >= 4:
         print("nombre de pieces de 2 dh est : 2")
-        SystemExit
 
     elif remise >= 2:
         reste = 1
