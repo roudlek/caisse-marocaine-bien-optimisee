@@ -9,13 +9,13 @@ prix = 1
 
 if prix > 0:
     while True:         # en utilisant tanque
-        C = C + 1
+        C += 1
         print("entrer le cout d'achat du produit",C,":")
         prix = int(input())
         if prix <= 0:
             break
         else:
-            S = S + prix
+            S += prix
 
     if C >= 2 :
         print("la somme des produits est :", S)
@@ -28,7 +28,7 @@ if prix > 0:
                 monnaie = int(input())    
                 if monnaie > 0 and monnaie < S:
                     while monnaie < S :    # tand que monnaie < S, faire ces deux "si" jusqua
-                                           # monnaie devient plus grand que S
+                                        # monnaie devient plus grand que S
                         print("veuillez ajouter l'argent")
                         addition = int(input())
                         if addition <= 0 :
@@ -37,7 +37,7 @@ if prix > 0:
                                 print("veuillez entrer un positive !")
                                 addition = int(input())
                         if addition > 0:
-                            monnaie = monnaie + addition
+                            monnaie += addition
 
         elif monnaie > 0 and monnaie < S:
             while monnaie < S :    # tand que monnaie < S, faire ces deux "si" jusqua
@@ -50,7 +50,7 @@ if prix > 0:
                         print("veuillez entrer un positive !")
                         addition = int(input())
                 else :                  
-                    monnaie = monnaie + addition
+                    monnaie += addition
                 
 
 
@@ -102,6 +102,7 @@ elif monnaie > S :
 
     if remise >= 4:
         print("nombre de pieces de 2 dh est : 2")
+        SystemExit
 
     elif remise >= 2:
         reste = 1
